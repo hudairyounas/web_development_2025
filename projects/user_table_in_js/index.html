@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Table</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      ul {
+        list-style: none;
+      }
+      .addBtn {
+        padding: 10px 20px;
+        border: none;
+        background-color: red;
+        font-size: 20px;
+        color: whitesmoke;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        margin: 40px 0px;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .update_delete {
+        padding: 10px 20px;
+        border: none;
+        background-color: red;
+        font-size: 20px;
+        color: whitesmoke;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .studentForm {
+        display: flex;
+        align-items: center;
+      }
+      .gender {
+        display: flex;
+        gap: 15px; /* Adds space between the radio buttons */
+        align-items: center; /* Vertically align the radio button and label */
+      }
+      
+      /* Form Styling */
+      .updateDeleteForm {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        margin: 0 auto;
+      }
+      .updateDeleteForm form div {
+        margin-bottom: 15px;
+      }
+      .updateDeleteForm label {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+      }
+      .updateDeleteForm input[type="text"],
+      .updateDeleteForm input[type="number"],
+      .updateDeleteForm input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+      .updateDeleteForm input[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      .updateDeleteForm input[type="submit"]:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="updateDeleteForm">
+      <form id="studentForm">
+        <div>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+            required
+          />
+        </div>
+
+        <!-- Gender Section with Label -->
+        <div>
+          <label for="gender">Gender:</label>
+          <div class="gender">
+            <label for="male">
+              <input
+                type="radio"
+                id="genderMale"
+                name="gender"
+                value="male"
+              />
+              Male
+            </label>
+            <label for="female">
+              <input
+                type="radio"
+                id="genderFemale"
+                name="gender"
+                value="female"
+              />
+              Female
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+            required
+          />
+        </div>
+
+        <input type="submit" id="addBtn" value="Add Student" />
+      </form>
+    </div>
+
+    <nav>
+      <h1>Hudair</h1>
+    </nav>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>gender</td>
+            <td>age</td>
+            <td>update/delete</td>
+          </tr>
+        </thead>
+        <tbody class="tbodyTag">
+          <!-- Table rows will go here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
