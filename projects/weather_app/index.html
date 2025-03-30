@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+
+      <!-- main weather box start -->
+      <div class="weatherBox">
+        <div class="searchBox">
+          <input
+            class="inputBox"
+            type="text"
+            placeholder="Enter your city name"
+            id="searchInput"
+            autocomplete="off"
+          />
+          <button class="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="fistShow">
+          <h1>Please Enter Some Data</h1>
+        </div>
+
+        <div class="weatherMainBox" style="display: none">
+          <!-- weather icon div -->
+          <div class="weatherConditionIcon">
+            <img
+              width="300px"
+              height="170px"
+              src="./assets/cloud.png"
+              alt="cloud"
+            />
+          </div>
+
+          <!-- weather temp -->
+          <div class="weatherTempDiv">
+            <h1 class="weatherTemp">22°C</h1>
+          </div>
+
+          <!-- weather location -->
+          <div class="weatherLocation">
+            <h1 class="weatherCity">Faisalabad</h1>
+          </div>
+        </div>
+
+        <div class="humidityAndWind" style="display: none">
+          <!-- Humidity -->
+          <div class="humidity">
+            <div>
+              <img src="./assets/humidity.png" alt="humidity" />
+            </div>
+            <div>
+              <h3 class="humidityPercentage">64%</h3>
+              <h3>Humidity</h3>
+            </div>
+          </div>
+
+          <!-- Wind -->
+          <div class="wind">
+            <div>
+              <img src="./assets/humidity.png" alt="humidity" />
+            </div>
+            <div>
+              <h3 class="windSpeed">64km/h</h3>
+              <h3>Wind Speed</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
